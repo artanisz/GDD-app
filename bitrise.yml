@@ -29,6 +29,7 @@ workflows:
         - project_location: "$PROJECT_LOCATION/"
         - module: "$MODULE"
         - variant: "$VARIANT"
+        - arguments: "--no-daemon"
     - android-detekt@0.0.3: {}
     - android-unit-test@1.0.2:
         inputs:
