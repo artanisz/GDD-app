@@ -28,7 +28,13 @@ workflows:
         inputs:
         - project_location: "$PROJECT_LOCATION/"
         - module: "$MODULE"
-        - variant: "$VARIANT"
+        - variant: "Debug"
+        - arguments: "--no-daemon"
+    - android-lint@0.9.7:
+        inputs:
+        - project_location: "$PROJECT_LOCATION/"
+        - module: "$MODULE"
+        - variant: "Release"
         - arguments: "--no-daemon"
     - android-detekt@0.0.3: {}
     - android-unit-test@1.0.2:
